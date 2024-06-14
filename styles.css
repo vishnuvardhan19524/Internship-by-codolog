@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.header {
+    background: url('main.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header .navbar {
+    width: 100%;
+}
+
+.header .container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.header .display-4 {
+    font-size: 3.5rem;
+    margin-bottom: 200px;
+}
+
+.header .lead {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.header .btn {
+    padding: 15px 0px;
+    font-size: 1.25rem;
+}
