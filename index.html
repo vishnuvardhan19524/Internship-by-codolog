@@ -3,45 +3,529 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoe Selling Website</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Shoe Store</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            background-image: url(main.jpg);
+            font-family: Arial, sans-serif;
+        }
+
+         
+        .navbar-brand img {
+            max-width: 100px;
+        }
+        .search-bar {
+            flex-grow: 1;
+        }
+        .search-bar input {
+            width: 100%;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 15px;
+        }
+        .navbar-nav .nav-item:last-child {
+            margin-right: 0;
+        }
+
+         
+        .section {
+            padding: 40px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 250px;
+            object-fit: cover;
+        }
+        .card-body {
+            text-align: center;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .card-text {
+            font-size: 1rem;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+         
+        .featured-shoes {
+            background-color:none;
+        }
+
+         
+        .shoe-categories {
+            background-color: none;
+        }
+
+         
+        .best-sellers {
+            background-color: none;
+        }
+
+         
+        .new-arrivals {
+            background-color: none;
+        }
+
+         
+        .customer-reviews {
+            background-color: none;
+        }
+
+         
+        .blog {
+            background-color: none;
+        }
+
+         
+        .footer {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+        .footer-links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .footer-links a:hover {
+            text-decoration: none;
+            color: #28a745;
+        }
+        .footer-social-media i {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #333;
+        }
+        .footer-social-media i:hover {
+            color: #28a745;
+        }
+        .newsletter-form {
+            max-width: 400px;
+            margin-top: 20px;
+        }
+        .newsletter-form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .newsletter-form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .newsletter-form button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-nav .nav-item {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!--Header-->
-    <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">NiPu7 Shoe Store</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-grey" style="background-color: grey">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="main.jpg" alt="Logo">
+        </a>
+        <div class="search-bar">
+            <input class="form-control" type="search" placeholder="Search for shoes" aria-label="Search">
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Men</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Women</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kids</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sale</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="account.html"><i class="fa fa-user"></i> Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Body -->
+<div class="container mt-4">
+     
+    <section class="section featured-shoes">
+        <div class="container">
+            <h2 class="section-title"><u><b>Featured Shoes</b></u></h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/pic1.jpeg" class="card-img-top" alt="Shoe 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Versace Greca Labyrinth Lace up Sneaker</h5>
+                            <p class="card-text">₹4000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/pic2.jpeg" class="card-img-top" alt="Shoe 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Under Armour Project Rock 6 Black White</h5>
+                            <p class="card-text">₹3800</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/shoe4.jpg" class="card-img-top" alt="Shoe 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Nike AirJordan high Command yellow</h5>
+                            <p class="card-text">₹3300</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     
+    <section class="section shoe-categories">
+        <div class="container">
+            <h2 class="section-title"><u><b>Shoe Categories</b></u></h2>
+             
+            <h4 class="category-title">Men's Shoes</h4>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/pic4.jpeg" class="card-img-top" alt="Men's Shoe 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Men's Running Shoe</h5>
+                            <p class="card-text"><b style="color: black;">Nike Zoom Gt Cut 3 Vapor Green</b></p>
+                            <p class="card-text">Brand: Nike</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/pic5.jpeg" class="card-img-top" alt="Men's Shoe 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Men's Casual Shoe</h5>
+                            <p class="card-text"><b style="color: black;">Adidas_Campus 80 s Sftm</b></p>
+                            <p class="card-text">Brand: Adidas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/pic6.jpeg" class="card-img-top" alt="Men's Shoe 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Men's Formal Shoe</h5>
+                            <p class="card-text"><b style="color: black;">Asics Gel Spotlyte White Brown</b></p>
+                            <p class="card-text">Brand: Asics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             
+            <h4 class="category-title"><b>Women's Shoes</b></h4>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/pic7.jpeg" class="card-img-top" alt="Women's Shoe 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Women's Sneaker</h5>
+                            <p class="card-text"><b style="color: black;">Gucci_GG Black Suede Loafer</b></p>
+                            <p class="card-text">Brand: Puma</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/w2.jpeg" class="card-img-top" alt="Women's Shoe 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Women's Sandal</h5>
+                            <p class="card-text"><b style="color: black;">Puma Nova X Barbie</b></p>
+                            <p class="card-text">Brand: Puma</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/w3.jpeg" class="card-img-top" alt="Women's Shoe 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Women's Boots</h5>
+                            <p class="card-text"><b style="color: black;">Converse Chuck Heel Black White</b></p>
+                            <p class="card-text">Brand: Timberland</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h4 class="category-title">Kids' Shoes</h4>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/pic10.jpeg" class="card-img-top" alt="Kids' Shoe 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Kids' Sneaker</h5>
+                            <p class="card-text"><b style="color: black;">Nike_Air Force 1 Oil Green</b></p>
+                            <p class="card-text">Brand: Reebok</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/product4.jpg" class="card-img-top" alt="Kids' Shoe 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Kids' Sandal</h5>
+                            <p class="card-text"><b style="color: black;">Asics Gel Spotlyte White Brown</b></p>
+                            <p class="card-text">Brand: Crocs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/k3.jpeg" class="card-img-top" alt="Kids' Shoe 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Kids' Boots</h5>
+                            <p class="card-text"><b style="color: black;">Onitsuka Tiger Mexico</b></p>
+                            <p class="card-text">Brand: Onitsuka</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="section best-sellers">
+        <div class="container">
+            <h2 class="section-title">Best Sellers</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/b1.jpeg" class="card-img-top" alt="Best Seller 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Nike Lunar Force Duck Boots Lace Reflective</h5>
+                            <p class="card-text">₹10999</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/b2.jpeg" class="card-img-top" alt="Best Seller 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Nike Zoom x Invincible Cream Red</h5>
+                            <p class="card-text">₹3500</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/b3.jpeg" class="card-img-top" alt="Best Seller 3">
+                        <div class="card-body">
+                            <h5 class="card-title">New Balance RC 1300 Kith Antler</h5>
+                            <p class="card-text">₹3500</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section new-arrivals">
+        <div class="container">
+            <h2 class="section-title">New Arrivals</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/n1.jpeg" class="card-img-top" alt="New Arrival 1">
+                        <div class="card-body">
+                            <h5 class="card-title"><u>New Arrival 1</u></h5>
+                            <p class="card-text"><b style="color: black;">Adidas_Fear Of God Athletics White</b></p>
+                            <p class="card-text">₹4999</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/shoe5.jpg" class="card-img-top" alt="New Arrival 2">
+                        <div class="card-body">
+                            <h5 class="card-title"><u>New Arrival 2</u></h5>
+                            <p class="card-text">₹12999</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/shoe6.jpg" class="card-img-top" alt="New Arrival 3">
+                        <div class="card-body">
+                            <h5 class="card-title"><u>New Arrival 3</u></h5>
+                            <p class="card-text">₹13999</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="section customer-reviews">
+        <div class="container">
+            <h2 class="section-title">Customer Reviews</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Customer Review 1</h5>
+                            <p class="card-text">"Great shoes! Very comfortable."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Customer Review 2</h5>
+                            <p class="card-text">"Excellent quality and fast delivery."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Customer Review 3</h5>
+                            <p class="card-text">"Love the variety of styles available!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="section blog">
+        <div class="container">
+            <h2 class="section-title">Blog</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/shoe7.jpg" class="card-img-top" alt="Blog Post 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog Post 1</h5>
+                            <p class="card-text">Read about the latest shoe trends.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/shoe2.jpg" class="card-img-top" alt="Blog Post 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog Post 2</h5>
+                            <p class="card-text">Tips for choosing the right shoes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/shoe3.jpg" class="card-img-top" alt="Blog Post 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog Post 3</h5>
+                            <p class="card-text">How to care for your shoes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer style="background-color: grey;" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <h5>Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a style="color: rgb(15, 106, 181);" href="#"><u>Home</u></a></li>
+                    <li><a style="color: rgb(15, 106, 181);" href="shop.html"><u>Shop</u></a></li>
+                    <li><a style="color: rgb(15, 106, 181);" href="#"><u>About Us</u></a></li>
+                    <li><a style="color: rgb(15, 106, 181);" href="contact.html"><u>Contact Us</u></a></li>
                 </ul>
             </div>
-        </nav>
-        <div class="container text-center">
-            <h1 class="display-4">Welcome to the Best Shoe Store</h1>
-            <p class="lead">Find your perfect pair today</p>
-            <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+            <div class="col-md-3 mb-4">
+                <h5>Contact Info</h5>
+                <p>123 Shoe Street, City, Country</p>
+                <p>Email: info@shoestore.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h5>Social Media</h5>
+                <div class="footer-social-media">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h5>Newsletter Signup</h5>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
         </div>
-    </header>
+    </div>
+</footer>
 
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

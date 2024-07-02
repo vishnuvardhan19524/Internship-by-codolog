@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .body{
+            background-color: grey;
+        }
+        .navbar-brand img {
+            max-width: 100px;
+        }
+        .search-bar {
+            flex-grow: 1;
+        }
+        .search-bar input {
+            width: 100%;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 15px;
+        }
+        .navbar-nav .nav-item:last-child {
+            margin-right: 0;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-form input[type="text"], 
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: #0056b3;
+        }
+
+        
+        .footer {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+        .footer-links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .footer-links a:hover {
+            text-decoration: none;
+            color: #28a745;
+        }
+        .footer-social-media i {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #333;
+        }
+        .footer-social-media i:hover {
+            color: #28a745;
+        }
+        .newsletter-form {
+            max-width: 400px;
+            margin-top: 20px;
+        }
+        .newsletter-form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .newsletter-form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .newsletter-form button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-nav .nav-item {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-grey" style="background-color: grey;">
+    <a class="navbar-brand" href="#">
+        <img src="main.jpg" alt="Logo">
+    </a>
+    <div class="search-bar">
+        <input class="form-control" type="search" placeholder="Search for shoes" aria-label="Search">
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Men</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Women</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Kids</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sale</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="account.html"><i class="fa fa-user"></i> Account</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Offers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="login-form">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <a   style="text-align: right;" class="nav-link" href="account.html"><u>I don't have Account/SignUp</u></a>
+        </form>
+    </div>
+</div>
+
+<footer class="footer" style="background-color: grey;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5>Contact Us</h5>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@shoeshop.com</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>Follow Us</h5>
+                <div class="footer-social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>Subscribe to Our Newsletter</h5>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap and JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
