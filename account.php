@@ -14,7 +14,7 @@
     values(?, ?, ?, ?)");
     $stmt->bind_param('ssss',$name, $email, $password, $cpassword);
     $stmt->execute();
-    echo "Account Creation Succesfully Completed........";
+    echo "<h1>Account Creation Succesfully Completed........</h1>";
     $stmt->close();
     $conn->close();
   }

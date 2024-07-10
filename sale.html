@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Page - Shoe Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Header styles (existing) */
+        header {
+            position: relative;
+            z-index: 1000; /* Ensure header is above other content */
+        }
+
+        /* Main content styles */
+        .main-content {
+            padding: 20px;
+            background-color: #ffffff; /* Adjust as needed */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Sale item card styles */
+        .sale-item {
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sale-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .sale-item .card-img-top {
+            height: 300px; /* Adjust as needed */
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .sale-item:hover .card-img-top {
+            transform: scale(1.1);
+        }
+
+        .sale-item .card-body {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sale-item:hover .card-body {
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        .sale-item .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .sale-item .card-text {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .sale-item .btn-primary {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .sale-item .btn-primary:hover {
+            background-color: #ff5e6c;
+            border-color: #ff5e6c;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (existing) -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="logo.png" alt="Shoe Store Logo"></a>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kids</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#">Sale</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Offers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <div class="container mt-5 main-content">
+        <h1 class="text-center mb-4">Sale Items</h1>
+        <div class="row">
+            <!-- Sale item 1 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="sale-item">
+                    <img src="images/b1.jpeg" class="card-img-top" alt="Sale Item 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Now $49.99 <span class="text-muted"><del>$69.99</del></span></p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="1">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Sale item 2 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="sale-item">
+                    <img src="images/b2.jpeg" class="card-img-top" alt="Sale Item 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Now $39.99 <span class="text-muted"><del>$59.99</del></span></p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="2">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Sale item 3 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="sale-item">
+                    <img src="images/b3.jpeg" class="card-img-top" alt="Sale Item 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Now $59.99 <span class="text-muted"><del>$79.99</del></span></p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="3">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Sale item 4 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="sale-item">
+                    <img src="images/k3.jpeg" class="card-img-top" alt="Sale Item 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Now $69.99 <span class="text-muted"><del>$89.99</del></span></p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="4">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (existing) -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Quick Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#" class="text-dark">Home</a></li>
+                        <li><a href="#" class="text-dark">Shop</a></li>
+                        <li><a href="#" class="text-dark">About</a></li>
+                        <li><a href="#" class="text-dark">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contact Info</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="text-dark">123 Shoe St, Footville, FV 12345</li>
+                        <li class="text-dark">Email: info@shoestore.com</li>
+                        <li class="text-dark">Phone: (123) 456-7890</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#" class="text-dark">Facebook</a></li>
+                        <li><a href="#" class="text-dark">Instagram</a></li>
+                        <li><a href="#" class="text-dark">Twitter</a></li>
+                        <li><a href="#" class="text-dark">Pinterest</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Newsletter Signup</h5>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 bg-dark text-light">
+            © 2024 Shoe Store. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Wait for the document to load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all elements with class 'add-to-cart'
+            var addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+            // Add click event listener to each button
+            addToCartButtons.forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    // Prevent default form submission
+                    event.preventDefault();
+
+                    // Get product ID from data attribute
+                    var productId = button.getAttribute('data-product-id');
+
+                    // Call function to add item to cart
+                    addToCart(productId);
+                });
+            });
+
+            // Function to add item to cart
+            function addToCart(productId) {
+                // Example: Redirect to cart.html with product ID as query parameter
+                window.location.href = 'cart.html?productId=' + productId;
+            }
+        });
+    </script>
+</body>
+</html>

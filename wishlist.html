@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - Shoe Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Header styles */
+        .navbar-brand img {
+            max-width: 100px;
+        }
+        .search-bar {
+            flex-grow: 1;
+        }
+        .search-bar input {
+            width: 100%;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 15px;
+        }
+        .navbar-nav .nav-item:last-child {
+            margin-right: 0;
+        }
+        /* Animation for wishlist items */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .wishlist-item {
+            background: #f8f9fa;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .wishlist-item .product-img {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Hover effect for buttons */
+        .btn-animated {
+            transition: all 0.3s ease;
+        }
+
+        .btn-animated:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        /* Footer styles */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+        .footer-links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .footer-links a:hover {
+            text-decoration: none;
+            color: #28a745;
+        }
+        .footer-social-media i {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #333;
+        }
+        .footer-social-media i:hover {
+            color: #28a745;
+        }
+        .newsletter-form {
+            max-width: 400px;
+            margin-top: 20px;
+        }
+        .newsletter-form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .newsletter-form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .newsletter-form button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-nav .nav-item {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-grey" style="background-color: grey;">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="main.jpg" alt="Logo">
+                </a>
+                <div class="search-bar">
+                    <input class="form-control" type="search" placeholder="Search for shoes" aria-label="Search">
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Men</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Women</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kids</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sale</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="account.html"><i class="fa fa-user"></i> Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Body -->
+    <main class="container mt-5">
+        <h1 class="text-center mb-4">Your Wishlist</h1>
+        <div class="row">
+            <!-- Wishlist Item 1 -->
+            <div class="col-lg-6 mb-4">
+                <div class="wishlist-item animate__animated animate__fadeInUp">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="images/n1.jpeg" class="product-img" alt="Shoe 1">
+                        </div>
+                        <div class="col-md-8">
+                            <h5>Brand Name</h5>
+                            <h6>Product Name</h6>
+                            <p class="text-muted">$99.99</p>
+                            <button class="btn btn-info btn-animated btn-block">Move to Bag</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Wishlist Item 2 -->
+            <div class="col-lg-6 mb-4">
+                <div class="wishlist-item animate__animated animate__fadeInUp">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="images/n2.jpeg" class="product-img" alt="Shoe 2">
+                        </div>
+                        <div class="col-md-8">
+                            <h5>Brand Name</h5>
+                            <h6>Product Name</h6>
+                            <p class="text-muted">$89.99</p>
+                            <button class="btn btn-info btn-animated btn-block">Move to Bag</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Wishlist Item 3 -->
+            <div class="col-lg-6 mb-4">
+                <div class="wishlist-item animate__animated animate__fadeInUp">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="images/n3.jpeg" class="product-img" alt="Shoe 3">
+                        </div>
+                        <div class="col-md-8">
+                            <h5>Brand Name</h5>
+                            <h6>Product Name</h6>
+                            <p class="text-muted">$79.99</p>
+                            <button class="btn btn-info btn-animated btn-block">Move to Bag</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Wishlist Item 4 -->
+            <div class="col-lg-6 mb-4">
+                <div class="wishlist-item animate__animated animate__fadeInUp">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="images/n1.jpeg" class="product-img" alt="Shoe 4">
+                        </div>
+                        <div class="col-md-8">
+                            <h5>Brand Name</h5>
+                            <h6>Product Name</h6>
+                            <p class="text-muted">$69.99</p>
+                            <button class="btn btn-info btn-animated btn-block">Move to Bag</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+<footer style="background-color: grey;" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <h5>Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a style="color: rgb(15, 106, 181);" href="#"><u>Home</u></a></li>
+                    <li><a style="color: rgb(15, 106, 181);" href="shop2.html"><u>Shop</u></a></li>
+                    <li><a style="color: rgb(15, 106, 181);" href="#"><u>About Us</u></a></li>
+                    <li><a style="color: rgb(15, 106, 181);" href="contact.html"><u>Contact Us</u></a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h5>Contact Info</h5>
+                <p>123 Shoe Street, City, Country</p>
+                <p>Email: info@shoestore.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h5>Social Media</h5>
+                <div class="footer-social-media">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h5>Newsletter Signup</h5>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

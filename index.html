@@ -7,13 +7,14 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        /* Global styles */
         body {
-            background-color: #f7f7f7;
             background-image: url(main.jpg);
+            background-color: #f7f7f7;
             font-family: Arial, sans-serif;
         }
 
-         
+        /* Header styles */
         .navbar-brand img {
             max-width: 100px;
         }
@@ -30,7 +31,7 @@
             margin-right: 0;
         }
 
-         
+        /* Main body styles */
         .section {
             padding: 40px 0;
         }
@@ -66,37 +67,37 @@
             font-weight: bold;
         }
 
-         
+        /* Featured Shoes section */
         .featured-shoes {
-            background-color:none;
+            background-color: none;
         }
 
-         
+        /* Shoe Categories section */
         .shoe-categories {
             background-color: none;
         }
 
-         
+        /* Best Sellers section */
         .best-sellers {
             background-color: none;
         }
 
-         
+        /* New Arrivals section */
         .new-arrivals {
             background-color: none;
         }
 
-         
+        /* Customer Reviews section */
         .customer-reviews {
             background-color: none;
         }
 
-         
+        /* Blog section */
         .blog {
             background-color: none;
         }
 
-         
+        /* Footer styles */
         .footer {
             background-color: #f8f9fa;
             padding: 40px 0;
@@ -153,7 +154,7 @@
 <body>
 
 <!-- Header -->
-<nav class="navbar navbar-expand-lg navbar-light bg-grey" style="background-color: grey">
+<nav class="navbar navbar-expand-lg navbar-light bg-grey" style="background-color: grey;">
     <div class="container">
         <a class="navbar-brand" href="#">
             <img src="main.jpg" alt="Logo">
@@ -197,10 +198,10 @@
 
 <!-- Main Body -->
 <div class="container mt-4">
-     
+    <!-- Featured Shoes -->
     <section class="section featured-shoes">
         <div class="container">
-            <h2 class="section-title"><u><b>Featured Shoes</b></u></h2>
+            <h2 class="section-title">Featured Shoes</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card">
@@ -233,11 +234,11 @@
         </div>
     </section>
 
-     
+    <!-- Shoe Categories -->
     <section class="section shoe-categories">
         <div class="container">
-            <h2 class="section-title"><u><b>Shoe Categories</b></u></h2>
-             
+            <h2 class="section-title">Shoe Categories</h2>
+            <!-- Men's Shoes Category -->
             <h4 class="category-title">Men's Shoes</h4>
             <div class="row">
                 <div class="col-md-4 mb-4">
@@ -271,8 +272,8 @@
                     </div>
                 </div>
             </div>
-             
-            <h4 class="category-title"><b>Women's Shoes</b></h4>
+            <!-- Women's Shoes Category -->
+            <h4 class="category-title">Women's Shoes</h4>
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card">
@@ -305,7 +306,7 @@
                     </div>
                 </div>
             </div>
-            
+            <!-- Kids' Shoes Category -->
             <h4 class="category-title">Kids' Shoes</h4>
             <div class="row">
                 <div class="col-md-4 mb-4">
@@ -387,7 +388,7 @@
                     <div class="card">
                         <img src="images/n1.jpeg" class="card-img-top" alt="New Arrival 1">
                         <div class="card-body">
-                            <h5 class="card-title"><u>New Arrival 1</u></h5>
+                            <h5 class="card-title">New Arrival 1</h5>
                             <p class="card-text"><b style="color: black;">Adidas_Fear Of God Athletics White</b></p>
                             <p class="card-text">₹4999</p>
                         </div>
@@ -395,18 +396,20 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="images/shoe5.jpg" class="card-img-top" alt="New Arrival 2">
+                        <img src="images/n2.jpeg" class="card-img-top" alt="New Arrival 2">
                         <div class="card-body">
-                            <h5 class="card-title"><u>New Arrival 2</u></h5>
+                            <h5 class="card-title">New Arrival 2</h5>
+                            <p class="card-text"><b style="color: black;">Nike_Air Jordan 1 High Og Sp Dusted Clay</b></p>
                             <p class="card-text">₹12999</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="images/shoe6.jpg" class="card-img-top" alt="New Arrival 3">
+                        <img src="images/n3.jpeg" class="card-img-top" alt="New Arrival 3">
                         <div class="card-body">
-                            <h5 class="card-title"><u>New Arrival 3</u></h5>
+                            <h5 class="card-title">New Arrival 3</h5>
+                            <p class="card-text"><b style="color: black;">Versace House Printed Sneaker white</b></p>
                             <p class="card-text">₹13999</p>
                         </div>
                     </div>
@@ -510,7 +513,7 @@
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
                 </div>
             </div>
             <div class="col-md-3 mb-4">
@@ -524,6 +527,7 @@
     </div>
 </footer>
 
+<!-- JavaScript and dependencies -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
